@@ -2,7 +2,7 @@
 
 <%= form_for :user do |f| %>
     Username <%= f.text_field :username %><br>
-    Password <%= f.text_field :password %><br>
+    Home Location <%= f.text_field :home_location %><br>
     Are you a professional geologist? <%= f.select :professional, ['Yes', 'No'] %><br>
     <%= f.submit %>
 <% end %>
