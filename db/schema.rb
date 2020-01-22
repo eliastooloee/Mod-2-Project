@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 2020_01_22_172159) do
 
   create_table "rocks", force: :cascade do |t|
     t.string "nick_name"
-    t.string "type"
+    t.string "category"
     t.string "minerals"
     t.string "outcrop"
   end

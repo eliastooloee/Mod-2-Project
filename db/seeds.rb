@@ -8,16 +8,16 @@
 
 require 'faker'
 
-Rock.create(nick_name: 'Granodiorite', type: 'Igneous', minerals: 'Quartz, Plagioclase, Biotite', outcrop: 'Yes' )
-Rock.create(nick_name: 'Quartz Arenite', type: 'Sedimentary', minerals: 'Quartz', outcrop: 'Yes' )
-Rock.create(nick_name: 'Granite', type: 'Igneous', minerals: 'Quartz, Plagioclase, Hornblende', outcrop: 'Yes' )
-Rock.create(nick_name: 'Marble', type: 'Metamorphic', minerals: 'Calcite', outcrop: 'No' )
-Rock.create(nick_name: 'Andesite', type: 'Igneous', minerals: 'Plagioclase, Orthopyroxene', outcrop: 'Yes' )
-Rock.create(nick_name: 'Dolostone', type: 'Sedimentary', minerals: 'Dolomite', outcrop: 'Yes' )
-Rock.create(nick_name: 'Phosporia', type: 'Metamorphic', minerals: 'Quartz, Phosphite', outcrop: 'No' )
-Rock.create(nick_name: 'Greenschist', type: 'Metamorphic', minerals: 'Epidote, Chlorite, Serpentine', outcrop: 'Yes' )
-Rock.create(nick_name: 'Chondrite', type: 'Igneous', minerals: 'Olivine', outcrop: 'No' )
-Rock.create(nick_name: 'Kimberlite', type: 'Igneous', minerals: 'Olivine, Diamond, Clinopyroxene', outcrop: 'Yes' )
+Rock.create(nick_name: 'Granodiorite', category: 'Igneous', minerals: 'Quartz, Plagioclase, Biotite', outcrop: 'Yes' )
+Rock.create(nick_name: 'Quartz Arenite', category: 'Sedimentary', minerals: 'Quartz', outcrop: 'Yes' )
+Rock.create(nick_name: 'Granite', category: 'Igneous', minerals: 'Quartz, Plagioclase, Hornblende', outcrop: 'Yes' )
+Rock.create(nick_name: 'Marble', category: 'Metamorphic', minerals: 'Calcite', outcrop: 'No' )
+Rock.create(nick_name: 'Andesite', category: 'Igneous', minerals: 'Plagioclase, Orthopyroxene', outcrop: 'Yes' )
+Rock.create(nick_name: 'Dolostone', category: 'Sedimentary', minerals: 'Dolomite', outcrop: 'Yes' )
+Rock.create(nick_name: 'Phosporia', category: 'Metamorphic', minerals: 'Quartz, Phosphite', outcrop: 'No' )
+Rock.create(nick_name: 'Greenschist', category: 'Metamorphic', minerals: 'Epidote, Chlorite, Serpentine', outcrop: 'Yes' )
+Rock.create(nick_name: 'Chondrite', category: 'Igneous', minerals: 'Olivine', outcrop: 'No' )
+Rock.create(nick_name: 'Kimberlite', category: 'Igneous', minerals: 'Olivine, Diamond, Clinopyroxene', outcrop: 'Yes' )
 
 10.times do 
     User.create(username: Faker::Name.unique.first_name, home_location: Faker::Address.city, professional: 'No')
