@@ -1,0 +1,10 @@
+<h1> All Rocks </h1>
+
+<ul>
+    <% @rocks.each do |rock| %>
+        <li>
+        <%= link_to rock.nick_name, rock_path(rock)  %>
+        </li>
+        <br>
+    <% end %>
+</ul>

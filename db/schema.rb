@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 2020_01_22_172159) do
   end
 
   create_table "rocks", force: :cascade do |t|
+    t.string "nick_name"
     t.string "type"
     t.string "minerals"
     t.string "outcrop"
