@@ -1,0 +1,3 @@
+class RockLocationsController < ApplicationController
+    
+end

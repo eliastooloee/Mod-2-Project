@@ -1,0 +1,3 @@
+class UserRocksController < ApplicationController
+    
+end

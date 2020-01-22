@@ -1,0 +1,6 @@
+<%= form_for :rock do |f| %>
+    Type: <%= f.select :type, ['Igneous', 'Sedimentary', 'Metamorphic'] %><br>
+    Major Minerals <%= f.text_area :minerals %><br>
+    Outcrop or Boulder? <%= f.select :outcrop, ['Outcrop', 'Boulder'] %><br>
+    <%= f.submit %>
+<% end %>  
