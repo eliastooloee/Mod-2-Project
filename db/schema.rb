@@ -13,7 +13,8 @@
 ActiveRecord::Schema.define(version: 2020_01_22_172159) do
 
   create_table "locations", force: :cascade do |t|
-    t.string "coordinates"
+    t.string "latitude"
+    t.string "longitude"
     t.string "rock_types"
   end
 
