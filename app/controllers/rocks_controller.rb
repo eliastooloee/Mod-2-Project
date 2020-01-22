@@ -23,6 +23,6 @@ class RocksController < ApplicationController
 
     private
     def rock_params
-        params.require(:rock).permit(:nick_name, :type, :minerals, :outcrop)
+        params.require(:rock).permit(:nick_name, :category, :minerals, :outcrop)
     end
 end
