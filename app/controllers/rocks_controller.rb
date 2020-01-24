@@ -13,12 +13,25 @@ class RocksController < ApplicationController
 
     def create 
         @rock = Rock.new(rock_params)
+        
+        new_user_rock
+        create_user_rock
 
         if @rock.save
             redirect_to @rock
         else
             render :new
         end
+    end
+
+    def update
+        @rock.update(rock_params)
+    end
+
+    def delete
+        @rock.destroy
+        delete_user_rock
+        redirect_to rocks_path
     end
 
     private

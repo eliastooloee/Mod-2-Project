@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+  <h1> Logged in as <%= current_user %> </h1>
     <title>Rocklogger</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -8,8 +9,25 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
+  <nav class="navbar">
+    <a class="navbar-brand" href="/rocks" ><h1>Rocklogger</h1></a>
+    <div>
+        
+          <% if logged_in? %>
+          <button type="button" class="btn"><%= link_to 'My Profile', user_path(current_user.id) %></button>
+          <button type="button" class="btn"><%= link_to 'All Rocks', rocks_path %></button>
+          <button type="button" class="btn"><%= link_to 'New Rock', new_rock_path %></button>
+          <button type="button" class="btn"><%= link_to 'Logout', logout_path %></button>
+          <% end %>
+      </div>
+  </nav>
+  <body class="text-dark">
+    <p></p>
+    <div class="container-fluid px-5" >
+      <%= yield %>
+    </div>
 
-  <body>
-    <%= yield %>
-  </body>
+  
+
+  
 </html>
