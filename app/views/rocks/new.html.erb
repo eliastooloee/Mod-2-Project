@@ -5,6 +5,9 @@
     Category: <%= f.select :category, ['Igneous', 'Sedimentary', 'Metamorphic'] %><br>
     Major Minerals <%= f.text_area :minerals %><br>
     Outcrop or Boulder? <%= f.select :outcrop, ['Outcrop', 'Boulder'] %><br>
-    
+    <%= f.fields_for :rock_locations do |rock_location| %>
+    Latitude <%= rock_location.text_field :latitude %>
+    Longitude <%= rock_location.text_field :longitude %>
+    <% end %>
     <%= f.submit %>
 <% end %>  
