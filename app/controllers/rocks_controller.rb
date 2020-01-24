@@ -41,7 +41,7 @@ class RocksController < ApplicationController
 
     private
     def rock_params
-        params.require(:rock).permit(:nick_name, :category, :minerals, :outcrop, user_ids: [], rock_location_ids: [], location_attributes: [ :latitude, :longitude ] )
+        params.require(:rock).permit(:nick_name, :category, :minerals, :outcrop, user_ids: [], location_ids: [], locations_attributes: [ :latitude, :longitude, :rock_types ] )
     end
 
     def find_rock
