@@ -25,12 +25,14 @@ class RocksController < ApplicationController
     end
 
     def update
+        @rock = Rock.find(params[:id])
         @rock.update(rock_params)
     end
 
-    def delete
+    def destroy
+        @rock = Rock.find(params[:id])
         @rock.destroy
-        delete_user_rock
+       
         redirect_to rocks_path
     end
 

@@ -1,0 +1,1 @@
+<h1> Are you sure you want to delete this rock? This action can not be undone. </h1>

@@ -6,7 +6,9 @@ Rails.application.routes.draw do
   resources :locations
   
   post '/rocks/new', to:"rocks#create"
-  post 'rocks/edit', to:"rocks#update"
+  get '/rocks/:id/edit', to:"rocks#update"
+  post '/rocks/:id/edit', to:"rocks#update"
+  post '/rocks/:id/destroy', to:"rocks#destroy"
   root to: "rocks#index"
   get '/signup', to:"users#new", as: "signup"
 
