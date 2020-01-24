@@ -14,7 +14,8 @@ class RocksController < ApplicationController
     end
 
     def create 
-        @rock = Rock.new(rock_params)
+        @rock = current_user.rocks.create(rock_params)
+       
 
         if @rock.save
             redirect_to @rock
@@ -40,7 +41,7 @@ class RocksController < ApplicationController
 
     private
     def rock_params
-        params.require(:rock).permit(:id, :nick_name, :category, :minerals, :outcrop)
+        params.require(:rock).permit(:nick_name, :category, :minerals, :outcrop, user_ids: [])
     end
 
     def find_rock

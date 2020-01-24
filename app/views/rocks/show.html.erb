@@ -4,5 +4,7 @@
 <h2> Major Minerals: <%= @rock.minerals %></h2>
 <h2> Outcrop? : <%= @rock.outcrop %></h2>
 
+<% if @rock.user_id == current_user.id %>
 <%= link_to "Edit this rock", edit_rock_path(@rock) %>
 <%= link_to "Delete this rock", rock_path(@rock), method: :delete %>
+<% end %>
