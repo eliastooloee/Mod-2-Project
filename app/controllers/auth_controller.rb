@@ -10,6 +10,7 @@ class AuthController < ApplicationController
             redirect_to rocks_path
         else 
             render :login
+            flash.alert = "Username doesn't exist in Rocklogger. Check your spelling."
         end
     end
 

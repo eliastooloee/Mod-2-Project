@@ -1,24 +1,23 @@
-# README
+# Rocklogger (Beta) #
+* Ruby version 2.6.1
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Welcome to Rocklogger, the soon-to-be best web app for rockhounds to document their collections and share with others. 
 
-Things you may want to cover:
+## Getting Started ##
+To get started with Rocklogger, clone the repository, copy the link to your clipboard, then type `git clone` followed by the link from your clipboard. Cd into the directory, then run `bundle install` to install the neccessary gems. They should already be in your gemfile.
 
-* Ruby version
+## Gems ##
+In case they aren't in your gemfile, the required gems are:
+Faker
+Bootstrap
+Jquery rails
 
-* System dependencies
+## Database ##
+Run `rails db:migrate` to create the schema, followed by `rails db:seed` to seed the database. 
 
-* Configuration
+## Start! ##
+Run `rails s` to start the server, then go to localhost:3000/signup to get started!
 
-* Database creation
 
-* Database initialization
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...

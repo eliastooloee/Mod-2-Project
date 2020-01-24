@@ -6,8 +6,8 @@
     Major Minerals <%= f.text_area :minerals %><br>
     Outcrop or Boulder? <%= f.select :outcrop, ['Outcrop', 'Boulder'] %><br>
     <%= f.fields_for :locations, @rock.locations.build do |locations_fields| %>
-        Latitude <%= locations_fields.text_field :latitude %>
-        Longitude <%= locations_fields.text_field :longitude %>
+        Latitude <%= locations_fields.text_field :latitude %><br>
+        Longitude <%= locations_fields.text_field :longitude %><br>
         
         <% end %>
     <%= f.submit %>
