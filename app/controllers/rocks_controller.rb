@@ -1,4 +1,6 @@
 class RocksController < ApplicationController
+
+    before_action :find_rock, only: [:show, :edit, :update, :destroy]    
     def index
        @rocks = Rock.all 
     end
@@ -22,7 +24,6 @@ class RocksController < ApplicationController
     end
 
     def update
-        @rock = Rock.find(params[:id])
        if @rock.update(rock_params)
         redirect_to @rock
        else
@@ -39,6 +40,10 @@ class RocksController < ApplicationController
 
     private
     def rock_params
-        params.require(:rock).permit(:nick_name, :category, :minerals, :outcrop)
+        params.require(:rock).permit(:id, :nick_name, :category, :minerals, :outcrop)
+    end
+
+    def find_rock
+        @rock = Rock.find(params[:id])
     end
 end

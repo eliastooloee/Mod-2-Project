@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-  resources :rocks
+  resources :rocks, except: :edit
   resources :users
   resources :locations
 
@@ -8,7 +8,8 @@ Rails.application.routes.draw do
   get '/signup', to:"users#new", as: "signup"
   
   post '/rocks/new', to:"rocks#create"
-  post '/rocks/:id/edit', to:"rocks#update"
+  get '/rocks/:id/edit', to:"rocks#edit", as: 'edit_rock'
+  patch '/rocks/:id/edit', to:"rocks#update"
   post '/rocks/:id/destroy', to:"rocks#destroy"
   root to: "rocks#index"
   

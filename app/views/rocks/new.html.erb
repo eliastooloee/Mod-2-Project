@@ -5,6 +5,6 @@
     Category: <%= f.select :category, ['Igneous', 'Sedimentary', 'Metamorphic'] %><br>
     Major Minerals <%= f.text_area :minerals %><br>
     Outcrop or Boulder? <%= f.select :outcrop, ['Outcrop', 'Boulder'] %><br>
-    Finder: <%= f.collection_select :id, User.all, :id, :username %>
+    <%= @
     <%= f.submit %>
 <% end %>  
