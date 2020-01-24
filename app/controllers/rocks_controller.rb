@@ -13,9 +13,6 @@ class RocksController < ApplicationController
 
     def create 
         @rock = Rock.new(rock_params)
-        
-        new_user_rock
-        create_user_rock
 
         if @rock.save
             redirect_to @rock
@@ -26,7 +23,11 @@ class RocksController < ApplicationController
 
     def update
         @rock = Rock.find(params[:id])
-        @rock.update(rock_params)
+       if @rock.update(rock_params)
+        redirect_to @rock
+       else
+        render :edit
+       end
     end
 
     def destroy

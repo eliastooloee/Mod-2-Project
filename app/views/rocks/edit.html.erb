@@ -1,9 +1,7 @@
-%= form_for :rock do |f| %>
+<%= form_for :rock do |f| %>
     Name: <%= f.text_field :nick_name %><br>
     Category: <%= f.select :category, ['Igneous', 'Sedimentary', 'Metamorphic'] %><br>
     Major Minerals <%= f.text_area :minerals %><br>
     Outcrop or Boulder? <%= f.select :outcrop, ['Outcrop', 'Boulder'] %><br>
     <%= f.submit %>
 <% end %>  
-
-<%= link_to "Delete this rock", rock_path(@rock), method: :delete %>
